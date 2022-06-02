@@ -29,7 +29,7 @@
                 auth()->user()->can('category.view') || auth()->user()->can('brand.create') ||
                 auth()->user()->can('unit.create') || auth()->user()->can('category.create')) {
         ?>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-md-3">
             <div class="card">
                 <div class="face front-face">
                     <img src="{{ asset('img/product.png') }}" style="width:100px; height:100px"
@@ -74,7 +74,7 @@
         </div>
         <?php } if (auth()->user()->can('supplier.view') || auth()->user()->can('customer.view')) {?>
         <!-- Contact -->
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-3">
             <div class="card">
                 <div class="face front-face">
                     <img src="{{ asset('img/contact.png') }}" style="width:100px; height:100px"
@@ -105,7 +105,7 @@
         </div>
         <!-- Purchase -->
         <?php } if (auth()->user()->can('purchase.view') || auth()->user()->can('purchase.create') || auth()->user()->can('purchase.update')) {?>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-md-3">
             <div class="card">
                 <div class="face front-face">
                     <img src="{{ asset('img/purchase.png') }}" style="width:100px; height:100px"
@@ -138,7 +138,7 @@
         </div>
         <?php } if (auth()->user()->can('sell.view') || auth()->user()->can('sell.create') || auth()->user()->can('direct_sell.access') ||  auth()->user()->can('view_own_sell_only')) {?>
         <!-- Sells -->
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-md-3">
             <div class="card">
                 <div class="face front-face">
                     <img src="{{ asset('img/sales.png') }}" style="width:100px; height:100px"
@@ -191,7 +191,7 @@
     <div class="row">
         <!-- stock transfer -->
         <?php if (auth()->user()->can('purchase.view') || auth()->user()->can('purchase.create')) { ?>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-md-3">
             <div class="card">
                 <div class="face front-face">
                     <img src="{{ asset('img/stock_transfer.png') }}" style="width:100px; height:100px"
@@ -220,7 +220,7 @@
         </div>
         <?php } if (auth()->user()->can('purchase.view') || auth()->user()->can('purchase.create')) {?>
             <!-- stock adjustment -->
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-md-3">
             <div class="card">
                 <div class="face front-face">
                     <img src="{{ asset('img/adjustment.png') }}" style="width:100px; height:100px"
@@ -248,7 +248,7 @@
         </div>
         <?php } if (auth()->user()->can('expense.access')) {?>
         <!-- expenses -->
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-md-3">
             <div class="card">
                 <div class="face front-face">
                     <img src="{{ asset('img/expence.png') }}" style="width:100px; height:100px"
@@ -284,7 +284,7 @@
         auth()->user()->can('tax_rate.view') ||
         auth()->user()->can('tax_rate.create')) {?>
         <!-- settings -->
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-md-3">
             <div class="card">
                 <div class="face front-face">
                     <img src="{{ asset('img/settings.png') }}" style="width:100px; height:100px"
@@ -471,6 +471,20 @@ font-size: 1.2rem;
 
 .card:hover .face.back-face {
 transform: rotateY(360deg);
+}
+/* @media (max-width: 992px) 
+{
+    .card {
+    width: 226px;
+    height: 225px;
+    }
+} */
+@media (max-width: 800px) 
+{
+    .card {
+    width: 226px;
+    height: 225px;
+    }
 }
 
 @media(max-width: 991.5px) {
